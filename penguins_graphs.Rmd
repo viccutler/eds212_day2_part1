@@ -7,5 +7,19 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
 ```
 
+```{r}
+##head(penguins)
+##glimpse(penguins)
+##tail(penguins)
+```
+
+scatterplot of body mass versus flipper length:
+
+```{r}
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
+  geom_point(aes(color = species), size = 4) ##only include stuff related to variables within aes, otherwise put things outside of aes
+```

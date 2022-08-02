@@ -1,0 +1,53 @@
+---
+title: "EDS 212 Day 2 Part 1"
+author: "Victoria Cutler"
+date: "2022-08-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Derivatives in R
+
+Find the derivative of $f(x) = 5x^2$
+
+$$
+f(x) = 5x^2
+$$
+
+note: above function format is called "latex" format (pronounced latec)
+
+```{r}
+ex_1 <- expression(5 * x ^ 2) ##since x isn't defined, the "expression" is needed for r to understand that this is a mathematical expression with undefined variables
+
+my_derivative <- deriv(ex_1, "x") ## telling to take the derivative with respect to x, important for partial derivatives. can type "?deriv" in the console to see what this function does in the help section, sometime helpful sometimes not. D() does the same thing here
+my_derivative ## this will return the information that was just stored in this object
+
+## i want to find slope at x = 2.8
+
+x <- 2.8
+eval(my_derivative)
+```
+
+##Terminology
+
+"seq()" is a function
+
+"object" and "variable" are interchangeable at this point
+
+Find the slope of $g(z) = 2z3-10.5z3-10.5z^2+4.1$
+
+```{r}
+gz <- expression(2 * z^3 - 10.5 * z^3 - 10.5 * z^2 + 4.1)
+
+dg_dz <- D(gz,"z")
+dg_dz
+
+## let's eval the slope over a range of values
+z <- seq(from = -3, to = 4, by = 0.5)
+
+#evaluate it!
+eval(dg_dz)
+```

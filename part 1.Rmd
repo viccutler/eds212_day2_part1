@@ -31,7 +31,7 @@ x <- 2.8
 eval(my_derivative)
 ```
 
-##Terminology
+## Terminology
 
 "seq()" is a function
 
@@ -51,3 +51,8 @@ z <- seq(from = -3, to = 4, by = 0.5)
 #evaluate it!
 eval(dg_dz)
 ```
+
+## To Save In Git/GitHub:
+
+-   in console, do "usethis::use_git()" then to be in github "usethis::use_github()"
+-   

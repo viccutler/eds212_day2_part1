@@ -55,4 +55,5 @@ eval(dg_dz)
 ## To Save In Git/GitHub:
 
 -   in console, do "usethis::use_git()" then to be in github "usethis::use_github()"
--   
+-   to store in local git repo (repository) click "staged" then "commit"
+-   to store in remote git repo (github): store in local git repo then push changes in the git hub by clicking the green arrow (aka push) then refresh on git hub
